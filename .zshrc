@@ -74,7 +74,7 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 #keybindings
-bindkey -e
+bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
@@ -92,3 +92,21 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+
+# #Change cursor shape depending on mode
+# function zle-keymap-select {
+#   case $KEYMAP in 
+#     vicmd) echo -ne "e\[1 q" ;; #block cursor
+#     viins) echo -ne "e\[5 q" ;; #bar cursor
+#   esac
+# }
+#
+# zle -N zle-keymap-select
+#
+# #initial shape when shell starts
+# function zle-line-init
+# {
+#  echo -ne "\e[5 q" #bar cursor
+# }
+# zle -N zle-line-init
+
