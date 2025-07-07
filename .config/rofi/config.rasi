@@ -1,0 +1,7 @@
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "~/.config/rofi/Nord.rasi"
+// configuration{
+// 	show-icon: true;
+// 	icon-theme: "Adwaita";
+// 	mode: "drun";
+// 	}
