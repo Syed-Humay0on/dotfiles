@@ -23,7 +23,7 @@ eval "$(oh-my-posh init zsh --config /home/proto/.cache/oh-my-posh/themes/kushal
 eval "$(fzf --zsh)"
 
 #COMPLETION STYLING
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
