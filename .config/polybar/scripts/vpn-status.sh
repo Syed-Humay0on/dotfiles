@@ -16,7 +16,7 @@ for iface in "${IFACES[@]}"; do
 done
 
 if $is_vpn_up; then
-    echo " VPN: ON"
+    echo " 󰕟 VPN: ON"
 else
     echo " VPN: OFF"
 fi
