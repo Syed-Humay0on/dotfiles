@@ -41,6 +41,8 @@ alias linkup="sudo ip link set wlp2s0 up";
 alias sg="$HOME/.local/share/nvim/mason/bin/sg"
 # alias setoolkit="/home/proto/Tools/setoolkit/ && sudo ./setoolkit";
 alias setoolkit='(cd /home/proto/Tools/setoolkit && sudo ./setoolkit)'
+alias v="nvim"
+alias v.="cd ~/.config/nvim && nvim"
 
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
