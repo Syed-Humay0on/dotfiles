@@ -16,6 +16,14 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
 export PATH="/opt/lampp/bin:$PATH"
 
+#FZF COMMANDS
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git "
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix exclude .git"
+
+export FZF_CTRL_T_OPTS="--preview='bat --color=always {}'"
+export FZF_ALT_C_OPTS="--preview='eza --tree --color=always {}'"
+#oh-my-posh
 eval "$(oh-my-posh init zsh --config /home/proto/.cache/oh-my-posh/themes/kushal.omp.json)" 
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
 
@@ -32,8 +40,10 @@ autoload -Uz compinit
 compinit
 
 #Aliases
+alias tree="tree -L 3 -C -a -I 'git' --charset X"
+alias la="ls -lah"
 alias ls="ls --color"
-alias vfz='nvim $(fzf -m --preview="bat --color=always {}")'
+# alias vfz="nvim $(fzf -m --preview='bat --color=always {}')"
 alias bat="bat --color=always"
 alias cls="clear && printf '\e[3J'"
 alias xamppC="sudo /opt/lampp/manager-linux-x64.run"
