@@ -33,12 +33,14 @@ compinit
 
 #Aliases
 alias ls="ls --color"
+alias vfz='nvim $(fzf -m --preview="bat --color=always {}")'
+alias bat="bat --color=always"
 alias cls="clear && printf '\e[3J'"
 alias xamppC="sudo /opt/lampp/manager-linux-x64.run"
 alias linkdown="sudo ip link set wlp2s0 down";
 alias iwman="sudo iw wlp2s0 set type managed";
 alias linkup="sudo ip link set wlp2s0 up";
-alias sg="$HOME/.local/share/nvim/mason/bin/sg"
+alias sg="HOME/.local/share/nvim/mason/bin/sg"
 # alias setoolkit="/home/proto/Tools/setoolkit/ && sudo ./setoolkit";
 alias setoolkit='(cd /home/proto/Tools/setoolkit && sudo ./setoolkit)'
 alias v="nvim"
