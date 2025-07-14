@@ -17,12 +17,12 @@ export AWT_TOOLKIT=MToolkit
 export PATH="/opt/lampp/bin:$PATH"
 
 #FZF COMMANDS
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git "
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix exclude .git"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
-export FZF_CTRL_T_OPTS="--preview='bat --color=always {}'"
-export FZF_ALT_C_OPTS="--preview='eza --tree --color=always {}'"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --icons=always --header --color=always {}'"
 #oh-my-posh
 eval "$(oh-my-posh init zsh --config /home/proto/.cache/oh-my-posh/themes/kushal.omp.json)" 
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
@@ -41,7 +41,7 @@ compinit
 
 #Aliases
 alias tree="tree -L 3 -C -a -I 'git' --charset X"
-alias la="ls -lah"
+alias la="eza --long --color=always --header --icons=always --git"
 alias ls="ls --color"
 # alias vfz="nvim $(fzf -m --preview='bat --color=always {}')"
 alias bat="bat --color=always"
