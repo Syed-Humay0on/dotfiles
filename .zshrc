@@ -13,7 +13,6 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --icons=always --header --color=always {}'"
 #oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/nordtron.omp.json)" 
-[ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
 
 #Setup fzf
 eval "$(fzf --zsh)"
@@ -79,21 +78,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# #Change cursor shape depending on mode
-# function zle-keymap-select {
-#   case $KEYMAP in 
-#     vicmd) echo -ne "e\[1 q" ;; #block cursor
-#     viins) echo -ne "e\[5 q" ;; #bar cursor
-#   esac
-# }
-#
-# zle -N zle-keymap-select
-#
-# #initial shape when shell starts
-# function zle-line-init
-# {
-#  echo -ne "\e[5 q" #bar cursor
-# }
-# zle -N zle-line-init
-#
+# [Remove these lines] my personal environments and paths
 [ -f "$HOME/.zsh_extra" ] && source "$HOME/.zsh_extra"
+[ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
