@@ -41,7 +41,7 @@ compinit
 
 #Aliases
 alias tree="tree -L 3 -C -a -I 'git' --charset X"
-alias la="eza --long --color=always --header --icons=always --git"
+alias la="eza --all --tree --long --color=always --header --icons=always --sort modified --git"
 alias ls="ls --color"
 # alias vfz="nvim $(fzf -m --preview='bat --color=always {}')"
 alias bat="bat --color=always"
