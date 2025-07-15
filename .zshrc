@@ -1,20 +1,8 @@
+#fastfetch
 fastfetch 
 
+#Default Editor
 export EDITOR="nvim"
-export PATH=$PATH:/home/proto/.local/bin
-export PATH=$PATH:/var/lib/snapd/snap/bin
-export PATH=$PATH:/usr/sbin
-export PATH=$PATH:/usr/lib/jvm/java-24-openjdk
-export PATH=$PATH:/home/proto/.local/share/gem/ruby/3.4.0/bin
-export PATH=$PATH:/home/proto/.cargo/bin
-export GITHUB_TOKEN=$(<~/.gh_token)
-export PATH="$HOME/.npm-global/bin:$PATH"
-
-# export PATH=$PATH:gcc
-# export PATH=$PATH:/home/proto/Tools/setoolkit
-export _JAVA_AWT_WM_NONREPARENTING=1
-export AWT_TOOLKIT=MToolkit
-export PATH="/opt/lampp/bin:$PATH"
 
 #FZF COMMANDS
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -24,7 +12,7 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --icons=always --header --color=always {}'"
 #oh-my-posh
-eval "$(oh-my-posh init zsh --config /home/proto/.cache/oh-my-posh/themes/nordtron.omp.json)" 
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/nordtron.omp.json)" 
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
 
 #Setup fzf
@@ -41,24 +29,7 @@ compinit
 
 #Aliases
 alias tree="tree -L 3 -C -a -I 'git' --charset X"
-alias la="eza --all --tree --long --color=always --header --icons=always --sort modified --git"
-alias ls="ls --color"
-# alias vfz="nvim $(fzf -m --preview='bat --color=always {}')"
-alias bat="bat --color=always"
-alias cls="clear && printf '\e[3J'"
-alias xamppC="sudo /opt/lampp/manager-linux-x64.run"
-alias linkdown="sudo ip link set wlp2s0 down";
-alias iwman="sudo iw wlp2s0 set type managed";
-alias linkup="sudo ip link set wlp2s0 up";
-alias sg="HOME/.local/share/nvim/mason/bin/sg"
-# alias setoolkit="/home/proto/Tools/setoolkit/ && sudo ./setoolkit";
-alias setoolkit='(cd /home/proto/Tools/setoolkit && sudo ./setoolkit)'
-alias v="nvim"
-alias v.="cd ~/.config/nvim && nvim"
-
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+alias la="eza --all --tree --level 1 --long --color=always --header --icons=always --sort modified --git"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -124,4 +95,5 @@ setopt hist_find_no_dups
 #  echo -ne "\e[5 q" #bar cursor
 # }
 # zle -N zle-line-init
-
+#
+[ -f "$HOME/.zsh_extra" ] && source "$HOME/.zsh_extra"
