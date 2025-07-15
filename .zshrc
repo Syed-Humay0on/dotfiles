@@ -1,4 +1,4 @@
-fastfetch --logo blackarch
+fastfetch 
 
 export EDITOR="nvim"
 export PATH=$PATH:/home/proto/.local/bin
@@ -24,7 +24,7 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --icons=always --header --color=always {}'"
 #oh-my-posh
-eval "$(oh-my-posh init zsh --config /home/proto/.cache/oh-my-posh/themes/kushal.omp.json)" 
+eval "$(oh-my-posh init zsh --config /home/proto/.cache/oh-my-posh/themes/nordtron.omp.json)" 
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
 
 #Setup fzf
