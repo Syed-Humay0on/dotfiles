@@ -12,7 +12,6 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --icons=always --header --color=always {}'"
 #oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/nordtron.omp.json)" 
 
 #Setup fzf
 eval "$(fzf --zsh)"
