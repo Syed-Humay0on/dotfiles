@@ -4,7 +4,7 @@
  ***********************************************/
 configuration {
 	show-icons: true;
-	icon-theme: "Adwaita";
+	icon-theme: "Nordzy";
 	font: "FiraCode Nerd Font 11";
 }
 * {
