@@ -1,6 +1,7 @@
 # -----[Screenshot]-----
 super + s
-    dunstify "Taking Screenshot (Normal)" \
+  flameshot gui
+    # dunstify "Taking Screenshot (Normal)" \
 	&& maim -s \
     | tee "$HOME/Pictures/Screenshots/$(date +'%b %d, %r').png" \ 
     | xclip -selection clipboard -t image/png
