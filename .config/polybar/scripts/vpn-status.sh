@@ -16,9 +16,9 @@ for iface in "${IFACES[@]}"; do
 done
 
 if $is_vpn_up; then
-  echo "%{F#88c0d0}󰖂%{F-} VPN "
+  echo "%{F#88c0d0}󰖂%{F-} VPN"
 
 else
-  echo "%{F#707880}󰖂%{F-} VPN "
+  echo "%{F#707880}󰖂%{F-} VPN"
 fi
 
