@@ -8,6 +8,7 @@ status=$(cat /sys/class/power_supply/BAT0/status)
 # Nord Colors
 primary="#88c0d0"
 secondary="#a3be8c"
+tertiary="#EBCB8B"
 alert="#A54242"
 
 # Choose icon and color
@@ -22,10 +23,10 @@ elif [ "$battery_level" -ge 70 ]; then
   color="$primary"           # blue
 elif [ "$battery_level" -ge 40 ]; then
   icon="󰁽"
-  color="$primary"           # blue
+  color="$tertiary"           # blue
 elif [ "$battery_level" -ge 15 ]; then
   icon="󰁼"
-  color="$primary"           # blue
+  color="$tertiary"           # blue
 elif [ "$battery_level" -ge 10 ]; then
   icon="󰁺"
   color="$alert"             # red
