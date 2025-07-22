@@ -23,7 +23,7 @@ elif [ "$battery_level" -ge 70 ]; then
   color="$primary"           # blue
 elif [ "$battery_level" -ge 40 ]; then
   icon="󰁽"
-  color="$tertiary"           # blue
+  color="$primary"           # blue
 elif [ "$battery_level" -ge 15 ]; then
   icon="󰁼"
   color="$tertiary"           # blue
