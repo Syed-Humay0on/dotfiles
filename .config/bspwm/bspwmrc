@@ -47,3 +47,5 @@ bspc rule -a feh state=floating rectangle=1000x500+0+0 center=true
 #bspc rule -a Google-chrome rectangle=800x1000+0+0 center=true
 bspc rule -a Thunar rectangle=850x450+0+0 center=true
 bspc rule -a kitty rectangle=500x370+0+0 center=true
+bspc rule -a Emulator state=floating border=off follow=on
+
