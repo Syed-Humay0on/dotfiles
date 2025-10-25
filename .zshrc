@@ -1,6 +1,3 @@
-# Enable profiling if you ever want to debug startup
-# zmodload zsh/zprof
-
 # ────────────────────────────────
 # 🧠 Fastfetch (run once per session)
 [[ -z "$FASTFETCH_SHOWN" ]] && fastfetch && export FASTFETCH_SHOWN=1
@@ -88,17 +85,18 @@ setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups \
 [ -f "$HOME/.zsh_extra" ] && source "$HOME/.zsh_extra"
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
 
-# ────────────────────────────────
-# 🧩 Lazy Conda Initialization (replaces heavy init)
-conda_lazy_init() {
-    unset -f conda_lazy_init
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/proto/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
     if [ -f "/home/proto/miniconda3/etc/profile.d/conda.sh" ]; then
         . "/home/proto/miniconda3/etc/profile.d/conda.sh"
-        conda activate base
+    else
+        export PATH="/home/proto/miniconda3/bin:$PATH"
     fi
-}
-alias conda="conda_lazy_init && conda"
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-# ────────────────────────────────
-# 🔍 Profile summary (for diagnostics)
-# zprof
