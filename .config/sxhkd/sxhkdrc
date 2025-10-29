@@ -49,6 +49,10 @@ super + shift + Return
 super + d
 	env PATH=$PATH EDITOR=/usr/bin/nvim rofi -show drun 
 	# -theme-str 'configuration { show-icons: true; icon-theme: "Adwaita";}'
+# Launch Emoji Picker
+super + e
+  rofi -modi emoji -show emoji -theme ~/.config/rofi/Nord.rasi
+
 # Launch Browser
 super + F
 	firefox 
