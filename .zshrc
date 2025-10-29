@@ -1,5 +1,3 @@
-# ────────────────────────────────
-# 🧠 Fastfetch (run once per session)
 [[ -z "$FASTFETCH_SHOWN" ]] && fastfetch && export FASTFETCH_SHOWN=1
 
 # ────────────────────────────────
@@ -49,8 +47,6 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 # ────────────────────────────────
-# ⚡ Zinit plugins (Turbo Mode)
-zinit ice wait lucid
 
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
@@ -84,19 +80,3 @@ setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups \
 # 🌍 Personal environments & secrets
 [ -f "$HOME/.zsh_extra" ] && source "$HOME/.zsh_extra"
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/proto/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/proto/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/proto/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/proto/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
