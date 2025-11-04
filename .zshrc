@@ -4,6 +4,10 @@
 # 📝 Default Editor
 export EDITOR="nvim"
 
+#export tmux
+export TMUX_CONF_FILE="$HOME/.config/tmux/tmux.conf"
+alias tmux="tmux -f $TMUX_CONF_FILE"
+
 # ────────────────────────────────
 # 🔍 FZF configuration
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
