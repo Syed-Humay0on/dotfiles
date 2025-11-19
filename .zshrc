@@ -84,3 +84,7 @@ setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups \
 # 🌍 Personal environments & secrets
 [ -f "$HOME/.zsh_extra" ] && source "$HOME/.zsh_extra"
 [ -f "$HOME/.zsh_secrets" ] && source "$HOME/.zsh_secrets"
+
+# bun completions
+[ -s "/home/proto/.bun/_bun" ] && source "/home/proto/.bun/_bun"
+
