@@ -58,7 +58,7 @@ get_icon() {
         localsend*) icon="" ;;
         
         # Terminal
-        kitty*|xterm*|alacritty*) icon="" ;;
+        kitty*|xterm*|alacritty*) icon="" ;;
         
         # Communication
         vesktop*|discord*) icon="󰙯" ;;
