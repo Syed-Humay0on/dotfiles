@@ -1,0 +1,151 @@
+/************************************************
+ * ROFI Color theme - Catppuccin Mocha (Modified Structure)
+ * Mapping Catppuccin colors to a clean variable structure.
+ ***********************************************/
+
+/* Catppuccin Mocha Color Palette */
+* {
+    /* Background/Surface Colors */
+    cat-base:           #1e1e2e;
+    cat-mantle:         #181825;
+    cat-surface0:       #313244;
+    cat-surface1:       #45475a;
+
+    /* Text/Foreground Colors */
+    cat-text:           #cdd6f4;
+    cat-subtext1:       #bac2de;
+
+    /* Accent Colors */
+    cat-blue:           #89b4fa;
+    cat-lavender:       #b4befe;
+    cat-red:            #f38ba8;
+    cat-green:          #a6e3a1;
+
+    /* ------------------------------------------- */
+    /* MAPPING TO FUNCTIONAL VARIABLES (NORD STYLE) */
+    /* ------------------------------------------- */
+    
+    /* Main Backgrounds */
+    backgroundcolor:            @cat-base;       /* Main window background */
+    backgroundcoloralternate:   @cat-mantle;     /* Alternate list background (Optional: @cat-surface0) */
+    
+    /* Separators and Borders */
+    separatorcolor:             @cat-surface1;   /* Used for list separators and inputbar border */
+    scrollbarcolor:             @cat-surface0;   /* Color of the scrollbar handle */
+    
+    /* Text */
+    foregroundcolor:            @cat-text;       /* Default text color */
+    foregroundcolorinverse:     @cat-base;       /* Text color for selected elements (so it stands out on the light selection) */
+
+    /* Selection */
+    selectioncolor:             @cat-blue;       /* Highlight/Selection color */
+    selectioncoloractive:       @cat-lavender;   /* Color for active (e.g., urgent/active window) */
+
+    /* Generic Styling */
+    font-size: 1px;
+    border-color: @separatorcolor;
+    background-color: @backgroundcolor;
+    text-color: @foregroundcolor;
+    margin: 2;
+    margin-bottom: 2;
+    margin-top: 2;
+    spacing: 0;
+}
+
+configuration {
+    show-icons: true;
+    icon-theme: "Nordzy-catppuccin-mocha-mauve"; /* You might want to change this to a Catppuccin-friendly icon theme */
+    font: "FiraCode Nerd Font 11";
+    lines: 10;
+    location: 0;
+}
+
+#listview {
+    spacing: 0;
+    scrollbar: true;
+    margin: 0;
+    dynamic: true;
+}
+
+#window {
+    background-color: @backgroundcolor;
+    border-color: @separatorcolor;
+    border: 1;
+    border-radius: 2px;
+    width: 50%;
+    height: 60%;
+}
+
+#mainbox {
+    border: 0;
+    padding: 0;
+    background-color: @backgroundcoloralternate;
+}
+
+#element {
+    padding: 16;
+    border: 0 0 1 0;
+    border-color: @separatorcolor;
+    background-color: @backgroundcoloralternate;
+}
+
+#element.selected.normal {
+    /* Selected, default state */
+    background-color: @selectioncolor;
+    text-color: @foregroundcolorinverse; /* Inverted color so text is visible on accent */
+    border-radius: 0px;
+
+    border: 0 0 1 0;
+    border-color: @selectioncolor; /* Use accent color for border when selected */
+}
+
+#element.alternate.normal {
+    /* Unselected, alternate background row */
+    background-color: @backgroundcoloralternate;
+}
+
+// #element.normal.active,
+#element.normal.active {
+    /* Active/Urgent state (unselected) */
+    background-color: @cat-surface0; /* Slightly lighter background for active elements */
+}
+
+#element.selected.active {
+    /* Active and Selected state */
+    background-color: @selectioncoloractive; /* Use a secondary accent color for active selection */
+    text-color: @foregroundcolorinverse;
+    border-radius: 0px;
+
+    border: 0 0 1 0;
+    border-color: @selectioncoloractive;
+}
+
+#inputbar {
+    border: 0 solid 0 solid 1 solid 0 solid;
+    margin: 0;
+    spacing: 0;
+    border-color: @separatorcolor;
+}
+
+#prompt {
+    padding: 16;
+    background-color: @backgroundcoloralternate;
+    border: 0 1 0 0;
+}
+
+#entry {
+    padding: 16;
+}
+
+#scrollbar {
+    border: 0;
+    width: 8px;
+    handle-color: @scrollbarcolor;
+    handle-width: 8px;
+    background-color: @backgroundcoloralternate;
+}
+
+#scrollbar handle {
+    border: 1px;
+    border-color: @cat-red; /* Just making the border visible using red for contrast */
+}

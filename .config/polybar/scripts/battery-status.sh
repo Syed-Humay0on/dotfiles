@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # ~/.config/polybar/scripts/battery-status.sh
 
@@ -6,10 +5,10 @@ battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
 status=$(cat /sys/class/power_supply/BAT0/status)
 
 # Nord Colors
-primary="#88c0d0"
-secondary="#a3be8c"
+primary="#89b4fa"
+secondary="#a6e3a1"
 tertiary="#EBCB8B"
-alert="#A54242"
+alert="#f38ba8"
 
 # Choose icon and color
 if [ "$status" == "Charging" ]; then

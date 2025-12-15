@@ -32,9 +32,9 @@ bspc config top_padding 26
 # -----[Border Colors]-----
 # COLOR="#F7768E" # Tokyo Night
 # COLOR="#A6ACCD" # Poimandres
-COLOR_A="#71a2b0"
+COLOR_A="#89b4fa"
 # COLOR="#2E3440" # Invisible Nord Border
-COLOR="#3B4252" # Lighter Nord Border
+COLOR="#45475a" # Lighter Nord Border
 # COLOR="#5E81AC" # Bright Nord Border
 
 bspc config focused_border_color "$COLOR_A"

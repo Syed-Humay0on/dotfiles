@@ -1,5 +1,5 @@
 //@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-@theme "~/.config/rofi/Nord.rasi"
+@theme "~/.config/rofi/catppuccin-mocha.rasi"
 // configuration{
 // 	show-icon: true;
 // 	icon-theme: "Adwaita";
