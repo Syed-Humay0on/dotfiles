@@ -51,7 +51,7 @@ super + d
 	# -theme-str 'configuration { show-icons: true; icon-theme: "Adwaita";}'
 # Launch Emoji Picker
 super + e
-  rofi -modi emoji -show emoji -theme ~/.config/rofi/Nord.rasi
+  rofi -modi emoji -show emoji -theme ~/.config/rofi/catppuccin-mocha.rasi
 
 # Launch Browser
 super + F
