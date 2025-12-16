@@ -38,7 +38,7 @@
     foregroundcolorinverse:     @cat-base;       /* Text color for selected elements (so it stands out on the light selection) */
 
     /* Selection */
-    selectioncolor:             @cat-blue;       /* Highlight/Selection color */
+    selectioncolor:             @cat-surface1;       /* Highlight/Selection color */
     selectioncoloractive:       @cat-lavender;   /* Color for active (e.g., urgent/active window) */
 
     /* Generic Styling */
