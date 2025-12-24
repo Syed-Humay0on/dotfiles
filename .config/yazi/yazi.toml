@@ -1,2 +1,14 @@
 [plugin]
 open_file = "/usr/bin/nvim"
+
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true, desc = "Edit with Neovim" }
+]
+
+[open]
+rules = [
+    { name = "*.txt", use = "edit" },
+    { mime = "text/*", use = "edit" }
+]
+
