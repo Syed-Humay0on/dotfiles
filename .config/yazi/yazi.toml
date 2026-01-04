@@ -25,6 +25,9 @@ extract_tar = [
 extract_7z = [
     { run = 'mkdir -p "${1%.*}" && 7z x "$1" -o"${1%.*}"', desc = "Extract 7z", notify = true }
 ]
+play_video = [
+    { run = 'mpv "$@"', orphan = true, for = "unix", desc = "Play with MPV" }
+]
 
 [open]
 rules = [
@@ -35,6 +38,9 @@ rules = [
     { name = "*.tgz",    use = "extract_tar" },
     { name = "*.zip",    use = "extract_zip" },
     { name = "*.7z",     use = "extract_7z" },
+
+    # Video and Audio
+    { mime = "{video,audio}/*", use = "play_video" },
     
     # PDF and Documents
     { name = "*.pdf", use = "view_pdf" },
