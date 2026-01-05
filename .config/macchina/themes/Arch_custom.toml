@@ -1,0 +1,36 @@
+spacing         = 2
+padding         = 0
+hide_ascii      = true
+separator       = "->"
+key_color       = "#cba6f7"
+separator_color = "#74c7ec"
+
+[keys]
+host       =  "󰟐  HOST"
+machine    =  "  Machine" 
+kernel     =  "󱤓  Kernel"
+distro     =  "  Distro"
+packages   =  "  Packages"
+terminal   =  "󰄛  Terminal"
+shell      =  "  Shell"
+local_ip   =  "󰩟  Local IP"
+cpu        =  "  CPU"
+cpu_load   =  "  CPU Usage"
+gpu        =  "󰡈  GPU"
+memory     =  "  Memory"
+battery    =  "󱧥  Battery"
+uptime     =  "  Uptime"
+resolution =  "󰹑  Resolution"
+backlight  =  "󰃝  Brightness"
+wm         =  "  WM"
+
+
+[box]
+title = "  "
+border = "plain"
+visible = true
+
+[box.inner_margin]
+x = 1
+y = 1
+
