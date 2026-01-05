@@ -93,4 +93,5 @@ setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups \
 
 # bun completions
 [ -s "/home/proto/.bun/_bun" ] && source "/home/proto/.bun/_bun"
-
+#starship
+eval "$(starship init zsh)"
