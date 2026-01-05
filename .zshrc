@@ -1,4 +1,4 @@
-[[ -z "$MACCHINA_SHOWN" ]] && macchina && export MACCHINA_SHOWN=1
+macchina
 
 # ────────────────────────────────
 # 📝 Default Editor
