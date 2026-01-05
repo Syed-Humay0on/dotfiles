@@ -41,7 +41,11 @@ super + z
 # -----[Launch Programs]-----
 # Launch terminal emulator
 super + Return
-	kitty
+  kitty zsh -is eval "macchina; zsh"
+# Launch alacritty terminal
+super + a + Return
+  kitty zsh -is eval "macchina; zsh"
+
 # Launch thunar's bookshelf
 super + shift + Return
     thunar ~/
