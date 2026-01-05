@@ -1,4 +1,4 @@
-[[ -z "$FASTFETCH_SHOWN" ]] && fastfetch && export FASTFETCH_SHOWN=1
+[[ -z "$MACCHINA_SHOWN" ]] && macchina && export MACCHINA_SHOWN=1
 
 # ────────────────────────────────
 # 📝 Default Editor
