@@ -43,9 +43,8 @@ super + z
 super + Return
   kitty zsh -is eval "macchina; zsh"
 # Launch alacritty terminal
-super + a + Return
-  kitty zsh -is eval "macchina; zsh"
-
+super + a
+  alacritty
 # Launch thunar's bookshelf
 super + shift + Return
     thunar ~/
