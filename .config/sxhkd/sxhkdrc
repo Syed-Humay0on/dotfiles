@@ -14,7 +14,7 @@ super + shift + s
 # -----[Custom Startup Script]-----
 super + shift + y
     bash ~/.config/_Extras/desk.sh
-super + shift n
+super + shift + n
     bash ~/.config/_Extras/neovim.sh
 
 # -----[Controls]-----
@@ -32,7 +32,7 @@ XF86AudioMute
 ctrl + alt + {Left,Down,Up,Right}
     tabc attach $(bspc query -N -n) {$(bspc query -N -n west),$(bspc query -N -n south),$(bspc query -N -n north),$(bspc query -N -n east)}
 # Create/remove from tabbed container
-super + z 
+super + z
     id=$(bspc query -N -n); \
     [[ "$(tabc printclass $id)" == "tabbed" ]] \
     && tabc detach $id \
@@ -41,10 +41,10 @@ super + z
 # -----[Launch Programs]-----
 # Launch terminal emulator
 super + Return
-  kitty zsh -is eval "macchina; zsh"
+  kitty
 # Launch alacritty terminal
 super + a
-  alacritty
+    alacritty
 # Launch thunar's bookshelf
 super + shift + Return
     thunar ~/
@@ -136,4 +136,3 @@ super + alt + {h,j,k,l}
 # Contract window size
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-

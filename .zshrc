@@ -1,8 +1,8 @@
-#starship
-eval "$(starship init zsh)"
 if [[ -z "$TMUX" ]]; then
   macchina
 fi
+#starship
+eval "$(starship init zsh)"
 
 # ────────────────────────────────
 # 📝 Default Editor
