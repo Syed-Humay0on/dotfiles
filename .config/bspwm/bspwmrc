@@ -2,7 +2,10 @@
 
 export DISPLAY=:0
 # -----[Autostart Applications]-----
-pgrep -x sxhkd > /dev/null || sxhkd &
+# pgrep -x sxhkd > /dev/null || sxhkd &
+killall -9 sxhkd 2>/dev/null
+#start fresh new sxhkd
+sxhkd &
 picom & # Compositor
 flashfocus & # Shows active windows
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & # Manages GUI authenatication
