@@ -1,6 +1,6 @@
-# if [[ -z "$TMUX" ]]; then
+if [[ -z "$TMUX" ]]; then
   macchina
-# fi
+fi
 #starship
 eval "$(starship init zsh)"
 

@@ -42,9 +42,6 @@ super + z
 # Launch terminal emulator
 super + Return
   kitty
-# Launch alacritty terminal
-super + a
-    alacritty
 # Launch thunar's bookshelf
 super + shift + Return
     thunar ~/
