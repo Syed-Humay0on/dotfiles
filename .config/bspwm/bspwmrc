@@ -19,7 +19,7 @@ xinput --set-prop "$DEVICE_NAME" "libinput Accel Speed" -0.15
 xinput --set-prop "$DEVICE_NAME" "libinput Accel Profile Enabled" 1, 0, 0
 
 # -----[Wallpaper]-----
-feh --bg-fill /home/proto/Pictures/Catppuccin-wallpapers/walls-catppuccin-mocha/greenbus.jpg &
+feh --bg-fill /home/proto/Pictures/Catppuccin-wallpapers/walls-catppuccin-mocha/hollow-knight.jpg &
 
 # -----[BSPWM Configuration]-----
 bspc monitor -d α β γ δ ε ζ η 
