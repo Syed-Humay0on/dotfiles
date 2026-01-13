@@ -1,0 +1,72 @@
+# See dunst(5) for all configuration options
+# vim: ft=cfg
+
+[global]
+  monitor = 0
+  follow = mouse
+  shrink = no
+  padding = 10
+  horizontal_padding = 10
+
+  width = (0, 200)
+  height = (0, 100)
+  offset = (18, 30)
+  origin = top-right
+
+  frame_width = 2
+  separator_height = 2
+  frame_color = "#cba6f7"
+  separator_color= frame
+
+  sort = no
+  font = FiraCode Nerd Font 10
+  markup = full
+  format = "<b>%s</b>\n%b"
+  alignment = left
+  show_age_threshold = 60
+  word_wrap = yes
+  ignore_newline = no
+  stack_duplicates = true
+  hide_duplicate_count = no
+  show_indicators = yes
+
+  icon_position = left
+  min_icon_size = 64
+  max_icon_size = 64
+  sticky_history = no
+  history_length = 6
+  title = Dunst
+  class = Dunst
+  corner_radius = 6
+
+  mouse_left_click = close_current
+  mouse_middle_click = do_action
+  mouse_right_click = close_all
+
+  progress_bar = true
+  progress_bar_height = 8
+  progress_bar_min_width = 200
+  progress_bar_max_width = 300
+  progress_bar_frame_width = 0
+  progress_bar_corner_radius = 1
+
+[urgency_low]
+  background = "#1e1e2e"
+  foreground = "#cdd6f4"
+  frame_color = "#a6e3a1"
+  highlight = "#a6e3a1"
+  timeout = 5
+
+[urgency_normal]
+  background = "#1e1e2e"
+  foreground = "#cdd6f4"
+  frame_color = "#cba6f7"
+  highlight = "#cba6f7"
+  timeout = 5
+
+[urgency_critical]
+  background = "#1e1e2e"
+  foreground = "#cdd6f4"
+  frame_color = "#fab387"
+  highlight = "#89b4fa"
+  timeout = 8
